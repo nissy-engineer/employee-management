@@ -1,0 +1,192 @@
+/* メインコンテナ: 3行グリッド */
+.employee-list {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    height: 100vh;
+    /* padding: 15px; */
+    box-sizing: border-box;
+}
+
+/* 1行目: タイトルエリア */
+.employee-title-area {
+    margin-bottom: 0px;
+    padding: 25px !important;
+    background-color: #215F9A;
+}
+
+.employee-title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* 2行目: 検索エリア（2列グリッド） */
+.employee-search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 25px 25px 5px 25px !important;
+    /* background-color: lightgreen; */
+}
+
+/* 2行目-1列目: 検索コンテンツ */
+.employee-search-content {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+}
+
+.employee-search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.employee-search-input:focus {
+    outline: none;
+    border-color: #215F9A;
+}
+
+.employee-search-button {
+    padding: 10px 20px;
+    background-color: #215F9A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.employee-search-button:hover {
+    background-color: #45a049;
+}
+
+/* 2行目-2列目: アクションボタン */
+.employee-action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.employee-import-button,
+.employee-export-button {
+    padding: 10px 20px;
+    border: 1px solid #215F9A;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.employee-import-button {
+    background-color: white;
+    color: #215F9A;
+}
+
+.employee-import-button:hover {
+    background-color: #215F9A;
+    color: white;
+}
+
+.employee-export-button {
+    background-color: #215F9A;
+    color: white;
+}
+
+.employee-export-button:hover {
+    background-color: #45a049;
+}
+
+/* 3行目: テーブルエリア */
+.employee-table-area {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5px 25px 25px 25px !important;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.employee-table thead {
+    background-color: #215F9A;
+    color: white;
+    display: block;  
+}
+
+.employee-table thead tr {
+    display: flex;  
+    width: 100%;
+}
+
+.employee-table th {
+    flex: 1;  
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.employee-table tbody {
+    display: block;  
+    overflow-y: auto; 
+    flex: 1;  
+}
+
+.employee-table tbody tr {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.employee-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.employee-table td {
+    flex: 1;
+    padding: 15px;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+}
+
+.employee-row-clickable {
+    cursor: pointer;
+}
+
+.employee-row-clickable:hover {
+    background-color: #e3f2fd !important;
+}
+
+.employee-row-clickable:active {
+    background-color: #bbdefb !important;
+}
+
+/* ローディング・エラー表示 */
+.employee-list>div {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+    color: #666;
+}

@@ -1,0 +1,301 @@
+/* モーダル背景 */
+.employee-detail-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* モーダル本体 */
+.employee-detail-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    /* overflow-y: auto; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column;
+}
+
+/* モーダルヘッダー */
+.employee-detail-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
+    border-bottom: 2px solid #e8e8e8;
+    background-color: #f9f9f9;
+    border-radius: 12px 12px 0 0;
+}
+
+.employee-detail-modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.employee-detail-modal-close-button {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.employee-detail-modal-close-button:hover {
+    color: #333;
+}
+
+/* モーダル本文 */
+.employee-detail-modal-body {
+    padding: 28px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* プロフィール写真セクション */
+.employee-detail-profile-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.employee-detail-profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 3px solid #e0e0e0;
+}
+
+.employee-detail-profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-detail-profile-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.employee-detail-photo-upload-button {
+    padding: 10px 24px;
+    background-color: #215F9A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.employee-detail-photo-upload-button:hover {
+    background-color: #1a4d7a;
+}
+
+/* 詳細セクション */
+.employee-detail-section {
+    margin-bottom: 28px;
+}
+
+.employee-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.employee-detail-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #215F9A;
+    text-align: left;
+}
+
+/* 詳細行 */
+.employee-detail-row {
+    display: flex;
+    padding: 14px 0;
+}
+
+.employee-detail-label {
+    font-weight: 600;
+    min-width: 160px;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+}
+
+.employee-detail-value {
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+    word-break: break-word;
+    text-align: left;
+}
+
+/* 入力フィールド（編集モード） */
+.employee-detail-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.employee-detail-input:focus {
+    outline: none;
+    border-color: #215F9A;
+}
+
+/* テキストエリア（備考欄の編集） */
+.employee-detail-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.employee-detail-textarea:focus {
+    outline: none;
+    border-color: #215F9A;
+}
+
+/* 備考欄 */
+.employee-detail-notes {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* モーダルフッター */
+.employee-detail-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 20px 28px;
+    border-top: 2px solid #e8e8e8;
+    background-color: #f9f9f9;
+    border-radius: 0 0 12px 12px;
+}
+
+.employee-detail-edit-button,
+.employee-detail-save-button,
+.employee-detail-delete-button,
+.employee-detail-cancel-button,
+.employee-detail-cancel-edit-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.employee-detail-edit-button,
+.employee-detail-save-button {
+    background-color: #215F9A;
+    color: white;
+}
+
+.employee-detail-edit-button:hover,
+.employee-detail-save-button:hover {
+    background-color: #1a4d7a;
+    box-shadow: 0 2px 6px rgba(33, 95, 154, 0.3);
+}
+
+.employee-detail-delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.employee-detail-delete-button:hover {
+    background-color: #da190b;
+    box-shadow: 0 2px 6px rgba(244, 67, 54, 0.3);
+}
+
+.employee-detail-cancel-button,
+.employee-detail-cancel-edit-button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.employee-detail-cancel-button:hover,
+.employee-detail-cancel-edit-button:hover {
+    background-color: #d0d0d0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .employee-detail-modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .employee-detail-modal-header,
+    .employee-detail-modal-body,
+    .employee-detail-modal-footer {
+        padding: 20px;
+    }
+
+    .employee-detail-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .employee-detail-label {
+        min-width: auto;
+    }
+
+    .employee-detail-modal-footer {
+        flex-direction: column;
+    }
+
+    .employee-detail-edit-button,
+    .employee-detail-save-button,
+    .employee-detail-delete-button,
+    .employee-detail-cancel-button,
+    .employee-detail-cancel-edit-button {
+        width: 100%;
+    }
+
+    .employee-detail-profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
