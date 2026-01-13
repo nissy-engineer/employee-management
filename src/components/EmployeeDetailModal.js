@@ -41,6 +41,7 @@ function EmployeeDetailModal({ employee, onClose }) {
             }
 
             const data = await response.json();
+            console.log(data);
             alert('画像をアップロードしました！');
 
             onClose();
