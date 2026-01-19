@@ -86,12 +86,12 @@
 }
 
 .employee-import-button {
-    background-color: white;
-    color: #215F9A;
+    background-color: #215F9A;
+    color: white;
 }
 
 .employee-import-button:hover {
-    background-color: #215F9A;
+    background-color: #1a4d7a;
     color: white;
 }
 
@@ -101,8 +101,24 @@
 }
 
 .employee-export-button:hover {
+    background-color: #1a4d7a;
+}
+
+.employee-add-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.employee-add-button:hover {
     background-color: #45a049;
 }
+
 
 /* 3行目: テーブルエリア */
 .employee-table-area {
