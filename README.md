@@ -33,12 +33,17 @@ employee-management/
 │   ├── components/
 │   │   ├── EmployeeDetailModal.css
 │   │   ├── EmployeeDetailModal.js
+│   │   ├── EmployeeDetailModal.tsx
 │   │   ├── EmployeeList.css
-│   │   └── EmployeeList.js
+│   │   ├── EmployeeList.js
+│   │   └── EmployeeList.tsx
 │   ├── App.css
-│   ├── App.js
-│   ├── config.js
-│   └── index.js
+│   ├── App.tsx
+│   ├── config.ts
+│   ├── index.js
+│   └── types.ts
+├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+└── tsconfig.json
 ```
